@@ -1,6 +1,6 @@
 {
   "name": "@rougenetwork/v2-core",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "AGPL-3.0",
   "description": "Smart contracts and core libs for the Rouge Protocol V2",
   "homepage": "https://github.com/TheRougeProject/v2-core#readme",
@@ -53,14 +53,14 @@
     }
   },
   "files": [
-      "./lib/config.js",
-      "./lib/rouge.js",
-      "./lib/Token.js",
-      "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json",
-      "./artifacts/contracts/Rouge.sol/Rouge.json",
-      "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
-      "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json",
-      "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
+    "./lib/config.js",
+    "./lib/rouge.js",
+    "./lib/Token.js",
+    "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json",
+    "./artifacts/contracts/Rouge.sol/Rouge.json",
+    "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
+    "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json",
+    "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
   ],
   "publishConfig": {
     "access": "public"
