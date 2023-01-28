@@ -1,6 +1,17 @@
+# Rouge Protocol V2
 
-#
+[![Version](https://img.shields.io/npm/v/@rouge/v2-core)](https://www.npmjs.com/package/@rouge/v2-core)
 
-The rest of the Rouge V2 contracts are agoing to be released when this version 
-get out of beta.
+In-depth documentation on Rouge V2 is available at [docs.rouge.network](https://docs.rouge.network/).
 
+## Install Dependencies
+
+`npm install`
+
+## Compile Contracts
+
+`npm compile`
+
+## Run Tests
+
+`npm test`

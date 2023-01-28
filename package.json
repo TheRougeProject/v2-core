@@ -1,0 +1,83 @@
+{
+  "name": "@rougenetwork/v2-core",
+  "version": "2.0.0",
+  "license": "AGPL-3.0",
+  "description": "Smart contracts and core libs for the Rouge Protocol V2",
+  "homepage": "https://github.com/TheRougeProject/v2-core#readme",
+  "author": {
+    "name": "Christophe Le Bars",
+    "email": "<clb@rouge.network>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRougeProject/v2-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheRougeProject/v2-core/issues"
+  },
+  "keywords": [
+    "rouge",
+    "ethereum",
+    "rouge-v2",
+    "protocol"
+  ],
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./config": {
+      "import": "./lib/config.js"
+    },
+    "./rouge": {
+      "import": "./lib/rouge.js"
+    },
+    "./Token": {
+      "import": "./lib/Token.js"
+    },
+    "./Factory.json": {
+      "import": "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json"
+    },
+    "./Rouge.json": {
+      "import": "./artifacts/contracts/Rouge.sol/Rouge.json"
+    },
+    "./IERC20.json": {
+      "import": "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json"
+    },
+    "./IERC721.json": {
+      "import": "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json"
+    },
+    "./IERC1155.json": {
+      "import": "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
+    }
+  },
+  "files": [
+      "./lib/config.js",
+      "./lib/rouge.js",
+      "./lib/Token.js",
+      "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json",
+      "./artifacts/contracts/Rouge.sol/Rouge.json",
+      "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
+      "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json",
+      "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.8.1",
+    "awesome-qr": "^2.1.5-rc.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.6",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2"
+  }
+}
