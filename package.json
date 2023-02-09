@@ -28,13 +28,13 @@
   "exports": {
     "./package.json": "./package.json",
     "./config": {
-      "import": "./lib/config.js"
+      "import": "./lib/config.mjs"
     },
     "./rouge": {
-      "import": "./lib/rouge.js"
+      "import": "./lib/rouge.mjs"
     },
     "./Token": {
-      "import": "./lib/Token.js"
+      "import": "./lib/Token.mjs"
     },
     "./Factory.json": {
       "import": "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json"
@@ -53,9 +53,9 @@
     }
   },
   "files": [
-    "./lib/config.js",
-    "./lib/rouge.js",
-    "./lib/Token.js",
+    "./lib/config.mjs",
+    "./lib/rouge.mjs",
+    "./lib/Token.mjs",
     "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json",
     "./artifacts/contracts/Rouge.sol/Rouge.json",
     "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
@@ -69,14 +69,14 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
     "@nomiclabs/hardhat-ethers": "^2.2.2",
-    "@nomiclabs/hardhat-etherscan": "^3.1.5",
-    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.4",
     "@openzeppelin/contracts": "^4.8.1",
     "awesome-qr": "^2.1.5-rc.0",
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
-    "hardhat": "^2.12.6",
+    "hardhat": "^2.12.7",
     "hardhat-gas-reporter": "^1.0.9",
     "solidity-coverage": "^0.8.2"
   }
