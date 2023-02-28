@@ -54,7 +54,6 @@
     "./lib/rouge.mjs",
     "./lib/Token.mjs",
     "./deployments/Artifacts.json",
-    "./deployments/Artifacts.production.json",
     "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
     "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json",
     "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
