@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 require("@nomiclabs/hardhat-ethers")
 require('@nomiclabs/hardhat-waffle')
 require('hardhat-gas-reporter')
+require('hardhat-deploy')
 
 dotenv.config()
 dotenv.config({ path: '.server.env' })
@@ -13,9 +14,6 @@ const fs = require('fs')
 
 const mnemonic = fs.readFileSync(".mnemonic").toString().trim()
 const deployer = fs.readFileSync(".deployer").toString().trim()
-
-const HashOne = "0x0000000000000000000000000000000000000000000000000000000000000001"
-const HashTwo = "0x0000000000000000000000000000000000000000000000000000000000000002"
 
 // Go to https://hardhat.org/config/ to learn more
 module.exports = {
@@ -28,6 +26,15 @@ module.exports = {
       }
     }
   },
+  namedAccounts: {
+    deployer: {
+      default: 0, // here this will by default take the first account as deployer
+      'arb-nova': deployer
+    },
+    // pool:{
+    //   default: 1, // here this will by default take the second account
+    // }
+  },
   networks: {
     hardhat: {
       //initialBaseFeePerGas: 0, // workaround from https://github.com/sc-forks/>
@@ -36,37 +43,48 @@ module.exports = {
     // main nets
     'arb-nova': {
       url: 'https://nova.arbitrum.io/rpc',
-      usdcAddress: '0x750ba8b76187092b0d1e87e28daaf484d1b5273b',
-      xdaiAddress: '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
-      accounts: [ HashOne, HashTwo, deployer ]
+      tokens: {
+        'USDC': '0x750ba8b76187092b0d1e87e28daaf484d1b5273b',
+        'XDAI': '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
+      }
     },
     // test nets
-    'cennz-old': {
+    'geth': {
       targets: [ 'test' ],
       url: 'http://127.0.0.1:8545/',
       createTestSet: true,
       accounts: { mnemonic },
+      tags: ["xxx", "local"]
     },
     gor: {
       targets: [ 'staging', 'production' ],
-      usdcAddress: '0xFA37fC3840C6E4A591D43f15160c9aeC70db57c7',
+      tokens: {
+        'USDC': '0xFA37fC3840C6E4A591D43f15160c9aeC70db57c7',
+      },
       url: `https://goerli.infura.io/v3/${process.env.INFURA_KEY}`,
       accounts: { mnemonic },
     },
     'arb-goerli': {
-      targets: [ 'test' ],
       url: `https://goerli-rollup.arbitrum.io/rpc`,
+      accounts: { mnemonic },
+      tags: ["xxx", "test"]
+    },
+    'basegor': {
+      url: `https://base-goerli.infura.io/v3/${process.env.BASE_INFURA_KEY}`,
       accounts: { mnemonic },
     },
     'metis-stardust': {
-      targets: [ 'staging', 'production' ],
-      usdcAddress: '0xFA37fC3840C6E4A591D43f15160c9aeC70db57c7',
+      tokens: {
+        'USDC': '0xFA37fC3840C6E4A591D43f15160c9aeC70db57c7',
+      },
       url: 'https://stardust.metis.io/?owner=588',
       accounts: { mnemonic },
     },
     mainnet: {
-      usdcAddress: '0xxxxxxxxxxx',
-      url: `https://mainnet.infura.io/v3/${process.env.VITE_INFURA_KEY}`,
+      tokens: {
+        'USDC': 'TODO',
+      },
+      url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
       //accounts: [ deployer ],
       //gasPrice: 50 * 1e9,
       maxFeePerGas: 65 * 1e9

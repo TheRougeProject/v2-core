@@ -1,0 +1,1215 @@
+{
+  "address": "0x0a7f68446D0360ff1132d967C371a6DF08169bd5",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint48",
+          "name": "tokenId",
+          "type": "uint48"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes16",
+          "name": "stamp",
+          "type": "bytes16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "salt",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "index",
+          "type": "uint24"
+        }
+      ],
+      "name": "Acquired",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint16",
+          "name": "channelId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint48",
+          "name": "supply",
+          "type": "uint48"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "AddedChannel",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "creator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "manager",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "URI",
+          "type": "string"
+        }
+      ],
+      "name": "ProjectSetup",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "bearer",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint48",
+          "name": "tokenId",
+          "type": "uint48"
+        }
+      ],
+      "name": "Redeemed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint16",
+          "name": "channelId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "grant",
+          "type": "bool"
+        }
+      ],
+      "name": "UpdateAuthorization",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "ACQUISITION_LIMIT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHANNEL_LIMIT",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "NFT_LIMIT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "URI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint16",
+              "name": "channelId",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "qty",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint256",
+              "name": "salt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes16[]",
+              "name": "stamps",
+              "type": "bytes16[]"
+            }
+          ],
+          "internalType": "struct Rouge.Acquisition[]",
+          "name": "acquisitions",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "acquire",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint48",
+              "name": "supply",
+              "type": "uint48"
+            },
+            {
+              "internalType": "uint48",
+              "name": "totalAcquired",
+              "type": "uint48"
+            },
+            {
+              "internalType": "uint48",
+              "name": "totalRedeemed",
+              "type": "uint48"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Rouge.Channel[]",
+          "name": "channel",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "addChannels",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getChainId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getInfos",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "uri",
+          "type": "string"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint48",
+              "name": "supply",
+              "type": "uint48"
+            },
+            {
+              "internalType": "uint48",
+              "name": "totalAcquired",
+              "type": "uint48"
+            },
+            {
+              "internalType": "uint48",
+              "name": "totalRedeemed",
+              "type": "uint48"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Rouge.Channel[]",
+          "name": "channels",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "balances",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4[]",
+          "name": "selectors",
+          "type": "bytes4[]"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "getRoles",
+      "outputs": [
+        {
+          "internalType": "bool[][]",
+          "name": "roles",
+          "type": "bool[][]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint48",
+          "name": "tokenId",
+          "type": "uint48"
+        }
+      ],
+      "name": "getTokenInfos",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "channelId",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes16",
+          "name": "stamp",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bool",
+          "name": "redeemed",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nextTokenId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint16",
+          "name": "channelId",
+          "type": "uint16"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint16",
+          "name": "channelId",
+          "type": "uint16"
+        }
+      ],
+      "name": "isEnabled",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint48",
+              "name": "tokenId",
+              "type": "uint48"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "bytes4",
+                  "name": "selector",
+                  "type": "bytes4"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "expire",
+                  "type": "uint32"
+                }
+              ],
+              "internalType": "struct UseCertificate.Memorandum",
+              "name": "memorandum",
+              "type": "tuple"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "sigR",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "sigS",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "sigV",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct UseCertificate.SignedCertificate",
+          "name": "signed",
+          "type": "tuple"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "uint48",
+              "name": "tokenId",
+              "type": "uint48"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "bytes4",
+                  "name": "selector",
+                  "type": "bytes4"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "expire",
+                  "type": "uint32"
+                }
+              ],
+              "internalType": "struct UseCertificate.Memorandum",
+              "name": "memorandum",
+              "type": "tuple"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "sigR",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "sigS",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "sigV",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct UseCertificate.SignedCertificate",
+          "name": "signed",
+          "type": "tuple"
+        }
+      ],
+      "name": "isValidSignature",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint16",
+              "name": "tokenId",
+              "type": "uint16"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "proof",
+              "type": "bytes32"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "from",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint48",
+                  "name": "tokenId",
+                  "type": "uint48"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "bytes4",
+                      "name": "selector",
+                      "type": "bytes4"
+                    },
+                    {
+                      "internalType": "uint32",
+                      "name": "expire",
+                      "type": "uint32"
+                    }
+                  ],
+                  "internalType": "struct UseCertificate.Memorandum",
+                  "name": "memorandum",
+                  "type": "tuple"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "sigR",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "sigS",
+                  "type": "bytes32"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "sigV",
+                  "type": "uint8"
+                }
+              ],
+              "internalType": "struct UseCertificate.SignedCertificate",
+              "name": "certificate",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Rouge.Redemption[]",
+          "name": "redemptions",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "redeem",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "manager",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "URI_",
+          "type": "string"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint48",
+              "name": "supply",
+              "type": "uint48"
+            },
+            {
+              "internalType": "uint48",
+              "name": "totalAcquired",
+              "type": "uint48"
+            },
+            {
+              "internalType": "uint48",
+              "name": "totalRedeemed",
+              "type": "uint48"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Rouge.Channel[]",
+          "name": "channel",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes4",
+              "name": "selector",
+              "type": "bytes4"
+            },
+            {
+              "internalType": "uint16[]",
+              "name": "channels",
+              "type": "uint16[]"
+            },
+            {
+              "internalType": "bool",
+              "name": "grant",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct Rouge.Authorization[]",
+          "name": "auth",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setup",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes4",
+              "name": "selector",
+              "type": "bytes4"
+            },
+            {
+              "internalType": "uint16[]",
+              "name": "channels",
+              "type": "uint16[]"
+            },
+            {
+              "internalType": "bool",
+              "name": "grant",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct Rouge.Authorization[]",
+          "name": "auth",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "updateAuthorizations",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "stamp",
+          "type": "bytes16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "proof",
+          "type": "bytes32"
+        }
+      ],
+      "name": "validProof",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "valid",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "tokenId",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "proof",
+          "type": "bytes32"
+        }
+      ],
+      "name": "validTokenProof",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "widthdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "widthdrawToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}

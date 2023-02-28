@@ -33,3 +33,7 @@ typechain-types
 cache
 artifacts
 
+deployments/Artifacts.test.json
+deployments/Artifacts.staging.json
+deployments/Artifacts.production.json
+deployments/geth
