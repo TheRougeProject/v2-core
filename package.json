@@ -39,14 +39,11 @@
     "./Artifacts.json": {
       "import": "./deployments/Artifacts.json"
     },
-    "./IERC20.json": {
-      "import": "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json"
+    "./Rouge.json": {
+      "import": "./artifacts/contracts/Rouge.sol/Rouge.json"
     },
-    "./IERC721.json": {
-      "import": "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json"
-    },
-    "./IERC1155.json": {
-      "import": "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
+    "./Factory.json": {
+      "import": "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.sol"
     }
   },
   "files": [
@@ -54,12 +51,14 @@
     "./lib/rouge.mjs",
     "./lib/Token.mjs",
     "./deployments/Artifacts.json",
-    "./artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json",
-    "./artifacts/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json",
-    "./artifacts/@openzeppelin/contracts/token/ERC1155/IERC1155.sol/IERC1155.json"
+    "./artifacts/contracts/Rouge.sol/Rouge.json",
+    "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.sol"
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
@@ -67,7 +66,6 @@
     "@nomiclabs/hardhat-ethers": "^2.2.2",
     "@nomiclabs/hardhat-etherscan": "^3.1.6",
     "@nomiclabs/hardhat-waffle": "^2.0.5",
-    "@openzeppelin/contracts": "^4.8.1",
     "hardhat-deploy": "^0.11.24",
     "awesome-qr": "^2.1.5-rc.0",
     "chai": "^4.3.7",

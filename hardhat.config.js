@@ -48,6 +48,13 @@ module.exports = {
         'XDAI': '0xda10009cbd5d07dd0cecc66161fc93d7c9000da1',
       }
     },
+    'optimism': {
+      url: '',
+      tokens: {
+        'USDC': '',
+        'XDAI': '',
+      }
+    },
     // test nets
     'geth': {
       targets: [ 'test' ],
