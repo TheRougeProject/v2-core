@@ -43,7 +43,7 @@
       "import": "./artifacts/contracts/Rouge.sol/Rouge.json"
     },
     "./Factory.json": {
-      "import": "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.sol"
+      "import": "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json"
     }
   },
   "files": [
