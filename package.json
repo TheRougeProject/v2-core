@@ -51,14 +51,16 @@
     "./lib/rouge.mjs",
     "./lib/Token.mjs",
     "./deployments/Artifacts.json",
+    "./contracts/Rouge.sol",
+    "./contracts/proxies/RougeProxyFactory.sol",
     "./artifacts/contracts/Rouge.sol/Rouge.json",
-    "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.sol"
+    "./artifacts/contracts/proxies/RougeProxyFactory.sol/RougeProxyFactory.json"
   ],
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.1"
+    "@openzeppelin/contracts": "^4.8.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
