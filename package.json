@@ -60,7 +60,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.2"
+    "@openzeppelin/contracts": "^4.8.2",
+    "erc-token-js": "^0.1.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
@@ -68,12 +69,12 @@
     "@nomiclabs/hardhat-ethers": "^2.2.2",
     "@nomiclabs/hardhat-etherscan": "^3.1.6",
     "@nomiclabs/hardhat-waffle": "^2.0.5",
-    "hardhat-deploy": "^0.11.24",
     "awesome-qr": "^2.1.5-rc.0",
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
     "hardhat": "^2.12.7",
+    "hardhat-deploy": "^0.11.24",
     "hardhat-gas-reporter": "^1.0.9",
     "solidity-coverage": "^0.8.2"
   }

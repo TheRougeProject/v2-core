@@ -14,8 +14,7 @@ import {
   abiEncodeCertificate
 } from '../lib/rouge'
 
-import { Token, TokenAmount } from '../lib/Token'
-import { expandToNDecimals } from '../lib/ethers'
+import { Token, TokenAmount, expandToNDecimals } from 'erc-token-js'
 
 const hashURI = 'Qmc9Jq48M4yveuPdscgZxecFcwCRUtdApfWdB3bYzAWGgS'
 const metaURI = `ipfs://${hashURI}/`

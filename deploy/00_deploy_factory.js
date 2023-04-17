@@ -4,8 +4,8 @@ const deploy = async ({getNamedAccounts, deployments}) => {
   const { deploy } = deployments
   const { deployer } = await getNamedAccounts()
 
-  // const balance = await provider.getBalance(deployer.address)
-  // console.log('deployer is ', deployer.address, balance)
+  //const balance = await ethers.provider.getBalance(deployer.address)
+  //console.log('deployer is ', deployer.address, balance)
 
   const singleton = await deploy('Rouge', {
     from: deployer,
