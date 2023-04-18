@@ -33,9 +33,6 @@
     "./rouge": {
       "import": "./lib/rouge.mjs"
     },
-    "./Token": {
-      "import": "./lib/Token.mjs"
-    },
     "./Artifacts.json": {
       "import": "./deployments/Artifacts.json"
     },
