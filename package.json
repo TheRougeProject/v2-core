@@ -1,6 +1,6 @@
 {
   "name": "@rougenetwork/v2-core",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "license": "AGPL-3.0",
   "description": "Smart contracts and core libs for the Rouge Protocol V2",
   "homepage": "https://github.com/TheRougeProject/v2-core#readme",
