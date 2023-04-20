@@ -46,7 +46,6 @@
   "files": [
     "./lib/config.mjs",
     "./lib/rouge.mjs",
-    "./lib/Token.mjs",
     "./deployments/Artifacts.json",
     "./contracts/Rouge.sol",
     "./contracts/proxies/RougeProxyFactory.sol",
@@ -58,7 +57,7 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.2",
-    "erc-token-js": "^0.1.1"
+    "erc-token-js": "^0.1.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
